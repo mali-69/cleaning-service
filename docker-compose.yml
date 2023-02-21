@@ -1,0 +1,15 @@
+version: '2.1'
+volumes:
+  plat-sci: {}
+
+services:
+
+  #######################################
+  # platform-science-assignment
+  #######################################
+  robot:
+    image: pltsci-sdet-assignment
+    restart: unless-stopped
+    container_name: robo-app
+    ports:
+      - '8080:8080'
